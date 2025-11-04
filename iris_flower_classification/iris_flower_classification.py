@@ -16,9 +16,12 @@ from sklearn.ensemble import RandomForestClassifier
 import os
 
 # 2️ Load Dataset from Kaggle
-print(" Downloading dataset from KaggleHub...")
-path = kagglehub.dataset_download("saurabh00007/iriscsv")
-print(" Dataset downloaded to:", path)
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("gokulrajkmv/unemployment-in-india")
+
+print("Path to dataset files:", path)
 
 # Find CSV file inside dataset folder
 csv_path = None
